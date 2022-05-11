@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 MaterialPageRoute(builder: (context) => const DetailScreen()));
           },
           child: Text("DetailPage"),
-          color: Colors.blueAccent,
+          color: Colors.red,
           textColor: Colors.white,
         ),
       ),
