@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:lesson_1/screens/screen_one.dart';
-import 'package:lesson_1/screens/screen_two.dart';
-import 'package:lesson_1/screens/screen_three.dart';
-import 'package:lesson_1/screens/screen_four.dart';
-
+import 'package:lesson_1/screens/detail_screen.dart';
+import 'package:lesson_1/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget{ // StateFullWidget
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      // home: ScreenOne(),
-      // home: ScreenTwo(),
-      // home: ScreenThree(),
-      home: ScreenFourth(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
+      routes: {
+        HomeScreen.id: (context) => const HomeScreen(),
+        DetailScreen.id: (context) => const DetailScreen(),
+      },
     );
   }
-//Text("Flutter B17")
 }
-
